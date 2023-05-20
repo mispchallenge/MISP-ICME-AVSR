@@ -1,6 +1,6 @@
 ## Improving Audio-Visual Speech Recognition by Lip-Subword Correlation Based Visual Pre-training and Cross-Modal Fusion Encoder
 
-- **Overview**  [Paper](./doc/Improving Audio-Visual Speech Recognition by Lip-Subword Correlation Based Visual Pre-training.pdf)
+- **Overview**  ![Paper](./doc/Improving Audio-Visual Speech Recognition by Lip-Subword Correlation Based Visual Pre-training.pdf)
 
   In recent research, slight performance improvement  is observed from automatic speech recognition systems to audiovisual  speech recognition systems in end-to-end frameworks  with low-quality videos. Unmatching convergence rates and  specialized input representations between audio-visual modalities  are considered to cause the problem. In this paper, we propose  two novel techniques to improve audio-visual speech recognition (AVSR) under a pre-training and fine-tuning training framework. First, we explore the correlation between lip shapes and syllablelevel  subword units in Mandarin through a frame-level subword  unit classification task with visual streams as input. The finegrained  subword labels guide the network to capture temporal  relationships between lip shapes and result in an accurate  alignment between video and audio streams. Next, we propose  an audio-guided Cross-Modal Fusion Encoder (CMFE) to utilize  main training parameters for multiple cross-modal attention  layers to make full use of modality complementarity. Experiments  on the MISP2021-AVSR data set show the effectiveness of  the two proposed techniques. Together, using only a relatively  small amount of training data, the final system achieves better  performances than state-of-the-art systems with more complex  front-ends and back-ends. **In this repostory, we release the PyTorch code of our work based on [Espnet](https://github.com/espnet/espnet) and [kaldi](https://github.com/kaldi-asr/kaldi).**
 
@@ -18,7 +18,7 @@
 
   In the fusion stage of decoupled training, the initialized  audio and visual branches already have the fundamental ability  to extract uni-modal representations. Based on the straightforward  assumption that the audio modality contains more  linguistic information essential for ASR tasks. We propose a  novel CMFE block in which the audio modality dominates  and more training parameters of the network are used for  modality fusion modeling. As for the modality fusion structures,  motivated by the decoder architecture of the vanilla  transformer, the layer-wise cross-attention is designed in  different layers to make full use of modality complementarity.
 
-<img src="./doc/Network.png" style="zoom: 15%;" />
+<img src="./doc/Network.png" style="zoom: 10%;" />
 
 ## SOTA Comparison
 
