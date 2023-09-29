@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+message NdarrayDatum{
+    required bytes data = 1;
+    required bytes shape = 2;
+    required bytes dtype = 3;
+}
+
+message PdfDatum{
+    required bytes token = 1;
+    required bytes stamp = 2;
+}
