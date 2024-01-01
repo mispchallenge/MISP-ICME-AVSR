@@ -42,13 +42,14 @@ decoder_conf:
 #init model params
 ignore_init_mismatch: True 
 init_param: 
-    - exp_far/a_com_sp_cat2/valid.acc.ave_5best.pth
     - exp_vsr/tritone3_lipfarmid_com00_100fps/valid.acc_pdf.best.pth
+    - exp_far/a_com_sp_cat2/valid.acc.ave_5best.pth
+    
 name_map: 
-    - {"encoder.encoders":"encoder.cross_fusion_encoderlayers"}
     - {"video_frontend.resnet":"video_frontend.resnet",
         "video_frontend.video_frontend":"video_frontend.video_frontend"}
-
+    - {"encoder.encoders":"encoder.cross_fusion_encoderlayers"}
+    
 # hybrid CTC/attention
 model_conf:
     ctc_weight: 0.3
