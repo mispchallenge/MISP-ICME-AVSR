@@ -58,9 +58,12 @@ decoder_conf:
 #init model params
 ignore_init_mismatch: True 
 init_param: 
-    - exp_far/a_com_sp_cat2/valid.acc.ave_5best.pth
     - exp_vsr/tritritone3_lipfarmid_com00_100fps/valid.acc_pdf.best.pth
+    - exp_far/a_com_sp_cat2/valid.acc.ave_5best.pth
+   
 name_map: 
+    - {"video_frontend.resnet":"video_frontend.resnet",
+        "video_frontend.video_frontend":"video_frontend.video_frontend"}
     - {"encoder.encoders.0":"encoder.alayerblock1.0",
         "encoder.encoders.1":"encoder.alayerblock1.1",
         "encoder.encoders.2":"encoder.alayerblock1.2",
@@ -73,8 +76,7 @@ name_map:
         "encoder.encoders.9":"encoder.alayerblock2.6",
         "encoder.encoders.10":"encoder.alayerblock2.7",
         "encoder.encoders.11":"encoder.alayerblock2.8"}
-    - {"video_frontend.resnet":"video_frontend.resnet",
-        "video_frontend.video_frontend":"video_frontend.video_frontend"}
+    
             
 
 # hybrid CTC/attention
